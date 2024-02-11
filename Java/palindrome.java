@@ -12,6 +12,10 @@ class palindrome {
             p=p*10+ld;
             n=n/10;  
         }
+        if(p==no)
+            System.out.println("Palindrome!!");
+        else
+            System.out.println("Not Palindrome!!");
     }
     
 
