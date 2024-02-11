@@ -1,27 +1,4 @@
-ls
-4         6         amith      mars               S1MCA_ANANDHU    vidhya_s1
-4.tar.gz  6.tar.gz  Amritha    Old Desktop files  s2
-5.tar.gz  7         first.sql  S1Hari             Untitled Folder
-(base) exam1@mca-pc61:~/Desktop$ -l
--l: command not found
-(base) exam1@mca-pc61:~/Desktop$ ls -l
-total 104
-drwxrwxr-x  2 exam1 exam1  4096 Oct  6 09:51 4
--rw-rw-r--  1 exam1 exam1 13273 Oct  6 09:51 4.tar.gz
--rw-rw-r--  1 exam1 exam1 16812 Oct  6 10:45 5.tar.gz
-drwxrwxr-x  2 exam1 exam1  4096 Oct  6 10:59 6
--rw-rw-r--  1 exam1 exam1 12586 Oct  6 11:00 6.tar.gz
-drwxrwxr-x  6 exam1 exam1  4096 Dec  1 09:44 7
-drwxrwxr-x  2 exam1 exam1  4096 Apr  2  2021 amith
-drwxrwxr-x  2 exam1 exam1  4096 Apr  2  2021 Amritha
--rw-rw-r--  1 exam1 exam1   688 Feb  6 14:49 first.sql
-drwxrwxr-x  2 exam1 exam1  4096 Apr  2  2021 mars
-drwxrwxr-x 13 exam1 exam1  4096 Jun 16  2023 Old Desktop files
-drwxrwxr-x  2 exam1 exam1  4096 Apr  2  2021 S1Hari
-drwxrwxr-x  5 exam1 exam1  4096 Apr  2  2021 S1MCA_ANANDHU
-drwxrwxr-x  4 exam1 exam1  4096 Feb  7 13:44 s2
-drwxrwxr-x  2 exam1 exam1  4096 Nov 22 11:48 Untitled Folder
-drwxrwxr-x  2 exam1 exam1  4096 Apr  2  2021 vidhya_s1
+
 (base) exam1@mca-pc61:~/Desktop$ cd s2
 (base) exam1@mca-pc61:~/Desktop/s2$ mkdir nsa
 (base) exam1@mca-pc61:~/Desktop/s2$ ls
@@ -33,46 +10,28 @@ drwxrwxr-x 2 exam1 exam1 4096 Feb  7 14:25 Java
 drwxrwxr-x 2 exam1 exam1 4096 Feb  8 14:09 nsa
 (base) exam1@mca-pc61:~/Desktop/s2$ date
 Thu Feb  8 14:11:35 IST 2024
-(base) exam1@mca-pc61:~/Desktop/s2$ man
-What manual page do you want?
+
 (base) exam1@mca-pc61:~/Desktop/s2$ man ls
-(base) exam1@mca-pc61:~/Desktop/s2$ man grep
-(base) exam1@mca-pc61:~/Desktop/s2$ man date
-(base) exam1@mca-pc61:~/Desktop/s2$ man echo
+
 (base) exam1@mca-pc61:~/Desktop/s2$ echo hello
 hello
-(base) exam1@mca-pc61:~/Desktop/s2$ man cat
-(base) exam1@mca-pc61:~/Desktop/s2$ 
+
 (base) exam1@mca-pc61:~/Desktop/s2$ cat sample.txt
 cat: sample.txt: No such file or directory
-(base) exam1@mca-pc61:~/Desktop/s2$ man cat
-(base) exam1@mca-pc61:~/Desktop/s2$ cat -q sample.txt
-cat: invalid option -- 'q'
-Try 'cat --help' for more information.
-(base) exam1@mca-pc61:~/Desktop/s2$ man cat
-(base) exam1@mca-pc61:~/Desktop/s2$ cat -A sample.txt
-cat: sample.txt: No such file or directory
+
 (base) exam1@mca-pc61:~/Desktop/s2$ cat > sample.txt
 
 hi                      
-hello(base) exam1@mca-pc61:~/Desktop/s2$ cat sample.txt
-cat: sample.txt: No such file or directory
-(base) exam1@mca-pc61:~/Desktop/s2$ cd nsa
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat sample.txt
+hello(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat sample.txt
 
 hi
 hello(base) exam1@mca-pc61:~/Desktop/s2/nsa$ man touch
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ touch test.txt
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ ^C
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ ls -l
-total 8
--rw-rw-r-- 1 exam1 exam1    9 Feb  8 14:18 sample.txt
--rw-rw-r-- 1 exam1 exam1 1500 Feb  8 14:21 test.txt
+
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ ls -l sample.txt
 -rw-rw-r-- 1 exam1 exam1 9 Feb  8 14:18 sample.txt
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ chmod u=rwe sample.txt
-chmod: invalid mode: ‘u=rwe’
-Try 'chmod --help' for more information.
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ chmod u=rwx sample.txt
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ ls -l sample.txt
 -rwxrw-r-- 1 exam1 exam1 9 Feb  8 14:18 sample.txt
@@ -90,37 +49,23 @@ Try 'chmod --help' for more information.
 a
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ echo $a
 10
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cp sample.txt s.txt
-cp: cannot open 'sample.txt' for reading: Permission denied
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ chmod u=rwx sample.txt
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cp sample.txt s.txt
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ move sample.txt s.txt
-No command 'move' found, did you mean:
- Command 'lmove' from package 'suck' (universe)
- Command 'love' from package 'love' (universe)
- Command 'more' from package 'util-linux' (main)
- Command 'qmove' from package 'torque-client-x11' (universe)
- Command 'qmove' from package 'torque-client' (universe)
- Command 'fmove' from package 'embassy-phylip' (multiverse)
- Command 'mmove' from package 'mtools' (main)
- Command 'mova' from package 'mova' (universe)
- Command 'jove' from package 'jove' (universe)
-move: command not found
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ mv sample.txt s.txt
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat s.txt
 
-hi
-hello(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat sample.txt
-cat: sample.txt: No such file or directory
+(base) exam1@mca-pc61:~/Desktop/s2/nsa$ cp sample.txt s.txt
+
+(base) exam1@mca-pc61:~/Desktop/s2/nsa$ mv sample.txt s.txt
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ rm s.txt
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat s.txt
 cat: s.txt: No such file or directory
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ pwd
 /home/exam1/Desktop/s2/nsa
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ ps
   PID TTY          TIME CMD
  3339 pts/0    00:00:00 bash
  5615 pts/0    00:00:00 ps
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ history
 
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ read a
@@ -141,8 +86,7 @@ a+b
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ c=$a+$b
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ echo $c
 3+5
-(base) exam1@mca-pc61:~/Desktop/s2/nsa$ c=$($a+$b)
-3+5: command not found
+
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ c=$(($a+$b))
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ echo $c
 (base) exam1@mca-pc61:~/Desktop/s2/nsa$ cat > test1.txt
