@@ -101,7 +101,7 @@ INSERT INTO departments(department_id,department_name,location_id) VALUES ('7','
 INSERT INTO departments(department_id,department_name,location_id) VALUES ('8','Sales','2500');
 INSERT INTO departments(department_id,department_name,location_id) VALUES ('9','Executive','1700');
 INSERT INTO departments(department_id,department_name,location_id) VALUES ('10','Finance','1700');
-INSERT INTO departments(department_id,department_name,location_id) VALUES (11,'Accounting',1700);
+INSERT INTO departments(department_id,department_name,location_id) VALUES ('11','Accounting','1700');
 
 
 #data for employees
