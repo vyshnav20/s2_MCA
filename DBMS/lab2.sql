@@ -14,7 +14,7 @@ select hire_date from employees where last_name in ("Grant","Whalen");
 
 # 5. Write a query to display name of the employee who is shipping clerk
 select concat(first_name," ",last_name) as Employee_Name from employees where job_id=(select job_id from jobs where job_title="shipping clerk");
-
+select concat(employees.first_name," ",employees.last_name) as Employee_Name, jobs.job_id from employees inner join jobs on employees.job_id=jobs.job_id where jobs.job_title="shipping clerk";
 # 6. Write a query to get all the employees who work for department 8.
 select concat(first_name," ",last_name) as Employee_Name, department_id from employees where department_id="8";
 
