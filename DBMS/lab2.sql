@@ -35,11 +35,13 @@ select lower(email) from employees;
 
 # 12. Write a query to display name of the employees who were hired in 1995.
 select concat(first_name," ",last_name) as Employee_Name from employees where year(hire_date)=1995;
-
+ 
 # 13. Write a query to insert an employee “Paul Newton” in department 11.
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,manager_id,department_id) values(207,'Paul','Newton','paul.newton@sqltutorial.org','585.123.4567','1987-07-17',2,12000.00,101,11);
+
 # 14. Write a query to delete the shipping department.
-select * from departments where department_name="shipping";
 delete from departments where department_name="shipping";
 set sql_safe_updates=0;
-desc employees;
+
+# 15. Write a query to display employes who where hiered on a thursday
+select * from employees where dayname(hire_date)='Thursday';
