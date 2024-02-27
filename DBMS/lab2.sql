@@ -28,7 +28,7 @@ select concat(first_name," ",last_name) as Employee_Name from employees where la
 select concat(first_name," ",last_name) as Employee_Name, hire_date from employees where year(hire_date) between 1995 and 1997;
 
 # 10. Write a query to display jobs where the maximum salary is less than 5000
-select job_title from jobs where job_id in(select job_id from employees group by job_id having max(salary)<5000);
+select job_title from jobs where max_salary<=5000;
 
 # 11. Write a query to display email address in lower case.
 select lower(email) from employees;
