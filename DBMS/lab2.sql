@@ -10,7 +10,7 @@ select email, phone_number from employees;
 select * from employees where last_name="Fay";
 
 # 4. Write a query to find the hire date for employees whose last name is “Grant” or “Whalen”.
-select hire_date from employees where last_name in ("Grant","Whalen");
+select concat(first_name," ",last_name) as Employee_Name,hire_date from employees where last_name in ("Grant","Whalen");
 
 # 5. Write a query to display name of the employee who is shipping clerk
 select concat(first_name," ",last_name) as Employee_Name from employees where job_id=(select job_id from jobs where job_title="shipping clerk");
@@ -31,7 +31,7 @@ select concat(first_name," ",last_name) as Employee_Name, hire_date from employe
 select job_title from jobs where max_salary<=5000;
 
 # 11. Write a query to display email address in lower case.
-select lower(email) from employees;
+select lower(email) as Email from employees;
 
 # 12. Write a query to display name of the employees who were hired in 1995.
 select concat(first_name," ",last_name) as Employee_Name from employees where year(hire_date)=1995;
@@ -44,4 +44,4 @@ delete from departments where department_name="shipping";
 set sql_safe_updates=0;
 
 # 15. Write a query to display employes who where hiered on a thursday
-select * from employees where dayname(hire_date)='Thursday';
+select concat(first_name," ",last_name) as Employee_Name, hire_date from employees where dayname(hire_date)='Thursday';
