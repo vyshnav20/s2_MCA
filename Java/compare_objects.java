@@ -13,7 +13,7 @@ class product
         System.out.print("Enter product price for item "+n+": ");
         price=sc.nextInt();
     }
-    void greatest(product a,product b)
+    void lowest(product a,product b)
     {
         if(price<a.price && price<b.price)
             System.out.println("\nProduct "+pname+" has lowest price");
@@ -33,6 +33,6 @@ class compare_objects
         p1.details(1);
         p2.details(2);
         p3.details(3);
-        p1.greatest(p2, p3);
+        p1.lowest(p2, p3);
     }
 }
