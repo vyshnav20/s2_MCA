@@ -15,8 +15,9 @@ insert into GRADE_REPORT values (17,112,"B"),(17,119,"C"),(8,85,"A"),(8,92,"A"),
 create table PREREQUISITE (Course_number varchar(20) ,Prerequisite_number varchar(20),foreign key (Course_number) references COURSE(Course_number),foreign key (Prerequisite_number) references COURSE(Course_number),primary key(Course_number,Prerequisite_number));
 insert into PREREQUISITE values("CS3380","CS3320"),("CS3380","MATH2410"),("CS3320","CS1310");
 
+select * from PREREQUISITE;
 # 3. Retrieve the list of all courses and grades of Smith
-select g.Grade,c.Course_name from STUDENT s inner join GRADE_REPORT g on s.Student_number = g.Student_number inner join SECTION se on g.Section_identifier= se.Section_identifier inner join COURSE c on se.Course_number=c.Course_number where s.Name="Smith";
+select c.Course_name,g.Grade from STUDENT s inner join GRADE_REPORT g on s.Student_number = g.Student_number inner join SECTION se on g.Section_identifier= se.Section_identifier inner join COURSE c on se.Course_number=c.Course_number where s.Name="Smith";
 
 # 4.list name of students who took sectin 'DATABASE' offered in fall of 2008 and their grades.
 select s.Name,g.Grade from STUDENT s join  GRADE_REPORT g on s.Student_number = g.Student_number inner join SECTION se on g.Section_identifier= se.Section_identifier inner join COURSE c on se.Course_number=c.Course_number where c.Course_name="Database" and se.Semester="Fall" and se.Year=08 ;
@@ -44,4 +45,4 @@ update STUDENT set  Class=2 where Name="Smith";
 #c. Insert new course
 insert into COURSE values("Knowledge Engineering","CS4390",3,"CS");
 #D. delete record for studnet with name Smith  and student_number is 17.
-delete from STUDENT where Student_name="Smith"
+delete from STUDENT where Student_name="Smith";
