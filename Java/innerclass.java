@@ -36,7 +36,9 @@ class innerclass
         CPU c = new CPU();
         CPU.Processor p=c.new Processor();
         CPU.RAM r= new CPU.RAM();
+        c.price=2500+(p.no_cores*20)+(r.memory*15);
         System.out.println("\n Processor:\nNo:of Cores : "+p.no_cores+"\nManufacturer: "+p.manufacturer);
         System.out.println("\n RAM:\nMemory Capacity : "+r.memory+" GB\nManufacturer: "+r.manufacturer);
+        System.out.println("\nCPU Price: "+c.price);
     }
 }
