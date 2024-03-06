@@ -23,6 +23,7 @@ select s.Name,g.Grade from STUDENT s join  GRADE_REPORT g on s.Student_number = 
 
 # 5. List the prerequisite for database course.
 select Course_name from COURSE where Course_number in (select p.Prerequisite_number from PREREQUISITE p join COURSE c on p.Course_number=c.Course_number where p.Course_number=(select Course_number from COURSE where Course_name="Database"));
+
 # 6. Retrieve all senior students majoring in CS.
 
 
