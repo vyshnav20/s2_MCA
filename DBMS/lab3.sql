@@ -15,7 +15,7 @@ insert into GRADE_REPORT values (17,112,"B"),(17,119,"C"),(8,85,"A"),(8,92,"A"),
 create table PREREQUISITE (Course_number varchar(20) ,Prerequisite_number varchar(20),foreign key (Course_number) references COURSE(Course_number),foreign key (Prerequisite_number) references COURSE(Course_number),primary key(Course_number,Prerequisite_number));
 insert into PREREQUISITE values("CS3380","CS3320"),("CS3380","MATH2410"),("CS3320","CS1310");
 
-select * from PREREQUISITE;
+
 # 3. Retrieve the list of all courses and grades of Smith
 select c.Course_name,g.Grade from STUDENT s inner join GRADE_REPORT g on s.Student_number = g.Student_number inner join SECTION se on g.Section_identifier= se.Section_identifier inner join COURSE c on se.Course_number=c.Course_number where s.Name="Smith";
 
@@ -26,10 +26,11 @@ select s.Name,g.Grade from STUDENT s join  GRADE_REPORT g on s.Student_number = 
 select Course_name from COURSE where Course_number in (select p.Prerequisite_number from PREREQUISITE p join COURSE c on p.Course_number=c.Course_number where p.Course_number=(select Course_number from COURSE where Course_name="Database"));
 
 # 6. Retrieve all senior students majoring in CS.
-
+create view seniors as select * from STUDENT where class=1;
+select * from seniors;
 
 # 7. Retrieve the name of all courses taught by Professor King in 2007 and 2008
-select c.Course_name from COURSE c join SECTION s on c.Course_number=s.Course_number where s.Instructor="King";
+select c.Course_name from COURSE c join SECTION s on c.Course_number=s.Course_number where s.Instructor="King" and (s.Year=07 or s.Year=08);
 
 # 8. For each section taught by King, retrieve course number, semester, year, number of students who took the section.
 select s.Course_number,s.Semester,s.Year,count(g.Student_number) as No_of_students from SECTION s join GRADE_REPORT g on s.Section_identifier=g.Section_identifier where s.Instructor="King" group by g.Section_identifier;
