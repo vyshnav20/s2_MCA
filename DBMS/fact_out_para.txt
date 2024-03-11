@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `fact_out_para`(in num int, out res int)
+BEGIN
+declare f int default 1;
+while num >0 
+do 
+	set f=f*num;
+	set num=num-1;
+end while;
+select f into res;
+END

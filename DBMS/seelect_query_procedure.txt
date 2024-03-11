@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `selecta`(out res int)
+BEGIN
+declare f int default 1;
+declare num int default 0;
+select min(Class) from STUDENT into num;
+while num >0 
+do 
+	set f=f*num;
+	set num=num-1;
+end while;
+select f into res;
+END
