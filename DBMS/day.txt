@@ -1,0 +1,6 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `day`(in d date, out da varchar(10))
+BEGIN
+declare dat varchar(10);
+set dat=Weekday(d);
+select dat into da;
+END

@@ -1,0 +1,16 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `grade`(in g int,out d varchar(50))
+BEGIN
+declare des varchar(50);
+if g > 90
+then set des="Grade is A";
+elseif g > 80
+then set des="Grade is B";
+elseif g > 70
+then set des="Grade is C";
+elseif g > 60
+then set des="Grade is D";
+else
+set des="Grade is E";
+end if;
+select des into d;
+END
