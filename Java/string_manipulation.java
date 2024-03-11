@@ -12,7 +12,7 @@ class word
     {
         System.out.println("Lower case: "+s.toLowerCase());
         System.out.println("Upper case: "+s.toUpperCase());
-        System.out.println("Lenght: "+s.length());
+        System.out.println("Length: "+s.length());
         System.out.println("substring(2): "+s.substring(2));
         System.out.println("substring(2,6): "+s.substring(2,6));
         System.out.println("trim: "+s.trim());
