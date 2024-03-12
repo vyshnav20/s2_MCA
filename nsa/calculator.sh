@@ -10,26 +10,25 @@ do
     fi
     ex="$ex$input"
     echo $ex
-    for i in $(seq 0 $((${#ex} - 1)))
+    for i in $(seq 1 $((${#ex})))
     do
-        char=${ex:i:1}
-        if [ "$char" == "+" ]
+        char=`expr substr ${ex} $i 1`
+        if [ $char = "+" ]
         then
-            ex=$((${ex:0:$i} $char ${ex:$((i + 1))}))
+            ex=$((`expr substr ${ex} 1 $((i - 1))`  +  `expr substr ${ex} $((i + 1)) $((${#ex} - i))`))
             break
-        elif [ "$char" == "-" ]
+        elif [ $char = "-" ]
         then
-            ex=$((${ex:0:$i} - ${ex:$((i + 1))}))
+            ex=$((`expr substr ${ex} 1 $((i - 1))`  -  `expr substr ${ex} $((i + 1)) $((${#ex} - i))`))
             break
-        elif [ "$char" == "*" ]
+        elif [ $char = "x" ]
         then
-            ex=$((${ex:0:$i} * ${ex:$((i + 1))}))
+            ex=$((`expr substr ${ex} 1 $((i - 1))`  *  `expr substr ${ex} $((i + 1)) $((${#ex} - i))`))
             break
-        elif [ "$char" == "/" ]
+        elif [ $char = "/" ]
         then
-            ex=$((${ex:0:$i} / ${ex:$((i + 1))}))
+            ex=$((`expr substr ${ex} 1 $((i - 1))`  /  `expr substr ${ex} $((i + 1)) $((${#ex} - i))`))
             break
-        fi
+        fi 
     done
-
 done
