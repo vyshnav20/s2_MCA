@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_values`(in barcode int,in n varchar(20),in p double(5,2), in q int(3))
+BEGIN
+declare f varchar(20);
+	if p>0 and q >0
+    then
+		insert into Product values (barcode,n,p,q);
+	else
+		set f= "Not inserted";
+        select f;
+	end if;
+END
