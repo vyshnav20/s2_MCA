@@ -3,7 +3,7 @@ l=${#s}
 str=""
 for i in $(seq $((l - 1)) -1 0)
 do
-    a=${s:i:1}
-    str+="$a"
+    a=`expr substr ${s} $((i)) 1`
+    echo $a
 done
 echo "Reversed word: " $str
