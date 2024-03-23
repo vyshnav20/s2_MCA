@@ -50,7 +50,7 @@ class Teacher extends Employee
     }
 }
 
-class employee_main
+class co3_2
 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
