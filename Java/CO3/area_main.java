@@ -20,9 +20,9 @@ class shape_area
 
 }
 class area_main
-{
-    
-    public static void main(String[] args) {
+{    
+    public static void main(String[] args) 
+    {
         Scanner sc=new Scanner(System.in);
         shape_area s =new shape_area();
         System.out.print("Enter radius of circle: ");
