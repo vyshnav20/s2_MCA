@@ -1,9 +1,9 @@
 read -p "Enter a string: " s
 l=${#s}
-str=""
-for i in $(seq $((l - 1)) -1 0)
+ns=""
+for i in $(seq $l -1 1)
 do
-    a=`expr substr ${s} $((i)) 1`
-    echo $a
+    a=$(expr substr "$s" $i 1)
+    ns="$ns$a"
 done
-echo "Reversed word: " $str
+echo "Reversed string: "$ns
