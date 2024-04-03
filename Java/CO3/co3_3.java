@@ -12,10 +12,10 @@ class Person
         name=sc.next();
         System.out.print("Enter Gender(M/F/O): ");
         gender=sc.next().charAt(0);
+        System.out.print("Enter Age: ");
+        age=sc.nextInt();        
         System.out.print("Enter Address: ");
         address=sc.next();
-        System.out.print("Enter Age: ");
-        age=sc.nextInt();
     }
 }
 
