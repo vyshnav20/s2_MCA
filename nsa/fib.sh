@@ -1,4 +1,4 @@
-read -p "enter no:of terms: " n
+read -p "Enter no:of terms: " n
 a=0
 b=1
 for i  in $(seq 1 $n)

@@ -12,10 +12,10 @@ class CO4_4
     public static void main(String[] args) 
     {
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter a no:of elements: ");
+        System.out.print("Enter no:of elements: ");
         int n=sc.nextInt();
         int nos[]=new int[n];
-        int sum=0;
+        double sum=0;
         System.out.print("Enter "+n+" numbers: ");
         for(int i=0;i<n;i++)
         {
@@ -25,6 +25,7 @@ class CO4_4
             else
                 sum+=nos[i];
         }
-        System.out.println("Average: "+sum/n);
+        System.out.println("Average: " + String.format("%.2f", sum/n));
+
     }
 }

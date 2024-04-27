@@ -33,7 +33,7 @@ class sort_string
 
 
 
-class sort_string_main 
+public class sort_string_main 
 {
     public static void main(String[] args) 
     {

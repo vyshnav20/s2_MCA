@@ -13,6 +13,23 @@ class passexception extends RuntimeException
         super(s);
     }
 }
+
+class user
+{
+    String name,password;
+    user(String n, String p)
+    {
+        name=n;
+        password=p;
+    }
+    void login(String n, String p)
+    {
+        if(name.equals(n)&&password.equals(p))
+            System.out.println("\t\tLogin successful");
+        else
+            throw new passexception("Invalid username or password!!");
+    }
+}
 class CO4_3
 {
     public static void main(String[] args) 
@@ -42,6 +59,13 @@ class CO4_3
             }
         }
         if(p==0)
-            throw new nameexception("Password must contain atleast 1 number");
+            throw new passexception("Password must contain atleast 1 number");
+        user u1=new user(s,pass);
+        System.out.println("\t\tLogin!!");
+        System.out.print("Username: ");
+        String n1=sc.next();
+        System.out.print("Password: ");
+        String p1=sc.next();
+        u1.login(n1,p1);
     }
 }
