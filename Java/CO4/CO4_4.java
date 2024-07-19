@@ -20,10 +20,18 @@ class CO4_4
         for(int i=0;i<n;i++)
         {
             nos[i]=sc.nextInt();
-            if(nos[i]<0)
-                throw new negative("Negative number!!!");
-            else
+            try
+            {
+                if(nos[i]<0)
+                    throw new negative("Negative number is not allowed!!!");
+                else
                 sum+=nos[i];
+            }
+            catch(negative e)
+            {
+                System.out.println("\n"+e.getMessage());
+                System.exit(0);
+            }
         }
         System.out.println("Average: " + String.format("%.2f", sum/n));
 

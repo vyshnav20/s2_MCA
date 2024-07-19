@@ -10,9 +10,9 @@ public class TestFigures {
         Circle circle = new Circle(5.0);
 
         // Display the area of each figure
-        System.out.println("Area of Rectangle: " + rectangle.area());
-        System.out.println("Area of Triangle: " + triangle.area());
-        System.out.println("Area of Square: " + square.area());
-        System.out.println("Area of Circle: " + circle.area());
+        rectangle.area();
+        triangle.area();
+        square.area();
+        circle.area();
     }
 }

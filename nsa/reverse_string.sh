@@ -6,4 +6,7 @@ do
     a=$(expr substr "$s" $i 1)
     ns="$ns$a"
 done
-echo "Reversed string: "$ns
+if [ "$ns" = "$s" ]
+then echo "Palindrome"
+else echo "Not Palindrome"
+fi
